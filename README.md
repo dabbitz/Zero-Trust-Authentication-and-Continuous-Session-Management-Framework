@@ -43,29 +43,31 @@ Two roles in the demo flow:
 ```
 Zero Trust App/
 ├── ZeroTrustAPI/
-│   ├── Controllers/ZeroTrustController.cs    # all auth endpoints
-│   ├── Models/User.cs
-│   ├── DeviceAccess.cs
-│   ├── SessionContext.cs
-│   ├── DeviceRequest.cs
-│   ├── GenerateRequest.cs
-│   ├── Services/SessionStore.cs              # Dictionary<int, SessionContext>
-│   ├── Services/SessionCleanupService.cs     # BackgroundService
-│   ├── AppDbContext.cs
-│   ├── Program.cs
-│   └── appsettings.json
+│   ├── ZeroTrustAPI/
+│   │   ├── Controllers/ZeroTrustController.cs    # all auth endpoints
+│   │   ├── Models/User.cs
+│   │   ├── DeviceAccess.cs
+│   │   ├── SessionContext.cs
+│   │   ├── DeviceRequest.cs
+│   │   ├── GenerateRequest.cs
+│   │   ├── Services/SessionStore.cs              # Dictionary<int, SessionContext>
+│   │   ├── Services/SessionCleanupService.cs     # BackgroundService
+│   │   ├── AppDbContext.cs
+│   │   ├── Program.cs
+│   └── └── appsettings.json
 ├── ZeroTrustClient/
-│   ├── StartPage, LoginPage, RegisterPage    # entry + credentials
-│   ├── MainPage (+ OtpTimerDrawable)         # PC: shows OTP, polls status, posture check
-│   ├── PhonePage                             # Mobile: enters OTP
-│   ├── AppPage, AccountDetailsPage           # protected areas, critical-action demo
-│   ├── Services/ApiService.cs                # secure/test/logout/timeout calls
-│   ├── Services/DelegationHandler.cs         # AuthInterceptor (JWT + refresh retry)
-│   ├── Services/DeviceInfoHelper.cs          # public IP (ipify), geolocation, device model
-│   └── Services/InactivityService.cs         # 45s AFK timer
-├── README.md                                 # Project documentation
-├── ZeroTrustAPI.slnx                         # Solution for the API
-└── ZeroTrustClient.slnx                      # Solution for the client app
+│   ├── ZeroTrustClient/
+│   │   ├── StartPage, LoginPage, RegisterPage    # entry + credentials
+│   │   ├── MainPage (+ OtpTimerDrawable)         # PC: shows OTP, polls status, posture check
+│   │   ├── PhonePage                             # Mobile: enters OTP
+│   │   ├── AppPage, AccountDetailsPage           # protected areas, critical-action demo
+│   │   ├── Services/ApiService.cs                # secure/test/logout/timeout calls
+│   │   ├── Services/DelegationHandler.cs         # AuthInterceptor (JWT + refresh retry)
+│   │   ├── Services/DeviceInfoHelper.cs          # public IP (ipify), geolocation, device model
+│   └── └── Services/InactivityService.cs         # 45s AFK timer
+├── README.md                                     # Project documentation
+├── ZeroTrustAPI.slnx                             # Solution for the API
+└── ZeroTrustClient.slnx                          # Solution for the client app
 ```
 
 ## Tech Stack
