@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZeroTrustClient.AccountDetailsPage">
+    <Grid Background="Transparent">
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnPageInteracted" />
+        </Grid.GestureRecognizers>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25">
+
+                <Label Text="This is the account details screen."
+                       FontSize="28" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+                <Label Text="We get to this screen after a critical action." 
+                       FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
+
+                <Button Text="Go Back"
+                        Clicked="OnGoBackClicked"
+                        BackgroundColor="Yellow"
+                        TextColor="Black"
+						HorizontalOptions="Center"
+                        WidthRequest="200"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
